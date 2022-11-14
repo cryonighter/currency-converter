@@ -11,8 +11,10 @@ class CurrencyConverter
      * @param CurrencyCodeConverter  $currencyCodeConverter
      * @param array | CurrencyRate[] $currencyRates
      */
-    public function __construct(private CurrencyCodeConverter $currencyCodeConverter, private array $currencyRates)
-    {
+    public function __construct(
+        private readonly CurrencyCodeConverter $currencyCodeConverter,
+        private readonly array $currencyRates,
+    ) {
     }
 
     /**
